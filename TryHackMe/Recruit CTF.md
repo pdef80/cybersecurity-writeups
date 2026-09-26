@@ -51,11 +51,11 @@ The scan identified theree exposed services:
 
 Then I inspected the web application running on port 80
 
-![[Pasted image 20260924210926.png]]
+![[images/Pasted image 20260924210926.png]]
 
 The application presents a simple authentication form using POST, along with a link to an "Access API" page.
 
-![[Pasted image 20260924211152.png]]
+![[images/Pasted image 20260924211152.png]]
 
 The API documentation describes a service that retrieves CV files from the database. This functionality suggested that the endpoint might be vulnerable to SSRF (server-side request forgery) or retrieval.
 
@@ -154,7 +154,7 @@ $HR_PASSWORD = '<REDACTED>';
 
 I returned to the login page and authenticated using the recovered HR credentials
 
-![[Pasted image 20260924213116.png]]
+![[images/Pasted image 20260924213116.png]]
 
 This gave me the first flag as a normal user, confirming successful initial access
 
@@ -167,7 +167,7 @@ After obtaining the user flag, I inspected dashboard.php and found a candidate s
 
 Submitting a single quote (') in the search field triggered a SQL error. The error message identified MySQL as the database system.
 
-![[Pasted image 20260924213854.png]]
+![[images/Pasted image 20260924213854.png]]
 
 I then tested the following input in the search field:
 ```search form
@@ -195,7 +195,7 @@ Next, I retrieved the name of the current database:
 ```sql
 Bob Smith UNION SELECT 1, database(), 3, 4 ;-- -
 ```
-![[Pasted image 20260924214801.png]]
+![[images/Pasted image 20260924214801.png]]
 
 The database name was "recruit_db"
 
@@ -209,7 +209,7 @@ FROM information_schema.tables
 WHERE table_schema = 'recruit_db'; -- -
 ```
 
-![[Pasted image 20260926144418.png]]
+![[images/Pasted image 20260926144418.png]]
 
 The database contained two relevant tables: "candidates" and "users"
 
@@ -223,7 +223,7 @@ FROM information_schema.columns
 WHERE table_name = 'users'; -- -
 ```
 
-![[Pasted image 20260926144746.png]]
+![[images/Pasted image 20260926144746.png]]
 
 The response revealed the following columns:
 
@@ -249,7 +249,7 @@ group_concat(username, ':', password SEPARATOR '<br>'),
 FROM users; -- -
 ```
 
-![[Pasted image 20260926145131.png]]
+![[images/Pasted image 20260926145131.png]]
 
 The query returned the administrator's credentials
 
@@ -260,7 +260,7 @@ The query returned the administrator's credentials
 
 I returned to the login page and authenticated using the recovered administrator credentials.
 
-![[Pasted image 20260926145426.png]]
+![[images/Pasted image 20260926145426.png]]
 
 
 Successful authentication as admin provided access to the administrator account and reveales the final flag

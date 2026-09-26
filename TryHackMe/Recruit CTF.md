@@ -260,7 +260,7 @@ The query returned the administrator's credentials
 
 I returned to the login page and authenticated using the recovered administrator credentials.
 
-![[images/Pasted image 20260926145426.png]]
+![](images/Pasted image 20260926145426.png)
 
 
 Successful authentication as admin provided access to the administrator account and reveales the final flag

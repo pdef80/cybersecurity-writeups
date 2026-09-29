@@ -14,7 +14,7 @@ First, I opened the main page of the application:
 http://10.130.159.175
 ```
 
-![[Pasted image 20260929145433.png]]
+![](Pasted%20image%2020260929145433.png)
 
 When attempting to move the piece to the winning square a8, the application returns an error message.
 

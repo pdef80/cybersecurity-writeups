@@ -1,4 +1,6 @@
 
+https://tryhackme.com/room/foolsmate
+
 It's mate in one. You know it, the engine knows it, my grandma knows it. The board says checkmate is one click away. The engine says no. Settle the argument.
 
 You can access the web app from your AttackBox's browser via: `http://10.130.159.175`

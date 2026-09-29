@@ -18,7 +18,7 @@ http://10.130.159.175
 
 When attempting to move the piece to the winning square a8, the application returns an error message.
 
-![](Pasted%20image%2020260929145655.png)
+![](images/Pasted%20image%2020260929145655.png)
 
 To understand the cause of the error, the nest step was to inspect the application's internal code
 I found a JavaScript file:

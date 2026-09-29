@@ -14,7 +14,7 @@ First, I opened the main page of the application:
 http://10.130.159.175
 ```
 
-![](Pasted%20image%2020260929145433.png)
+![](images/Pasted%20image%2020260929145433.png)
 
 When attempting to move the piece to the winning square a8, the application returns an error message.
 
@@ -27,11 +27,11 @@ I found a JavaScript file:
 http://10.130.159.175/js/app.js
 ```
 
-![[Pasted image 20260929184708.png]]
+![](images/Pasted%20image%2020260929184708.png)
 
 The JavaScript logic prevents us from moving the piece to the winning position on the chessboard
 
-![[Pasted image 20260929184854.png]]
+![](images/Pasted%20image%2020260929184854.png)
 
 ---
 
@@ -40,7 +40,7 @@ The JavaScript logic prevents us from moving the piece to the winning position o
 
 Using the browser's DevTools, I obtained the parameters of a valid request. For example, I made a move from a1 to a2.
 
-![[Pasted image 20260929185112.png]]
+![](images/Pasted%20image%2020260929185112.png)
 
 
 Since curl does not behave like a browser and does not execute JavaScript, I tried sending the request directly from the CLI using the parameters and data obtained from the valid request.
@@ -81,7 +81,7 @@ Then modify the JSON body to contain the desired move. For example:
 
 Send the request and receive the flag.
 
-![[Pasted image 20260929190328.png]]
+![](images/Pasted%20image%2020260929190328.png)
 
 ---
 

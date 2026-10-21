@@ -12,16 +12,16 @@ What is the flag?
 
 I opened the application and examined the available doors.
 
-![](images/Pasted%20image%2020261020201231.png)
+![](images/Pasted%20image%2020261021184309.png)
 
 
 I noticed that each door had a link, and each URL contained a hexadeximal value that looked like an MD5 hash.
 
-![[Pasted image 20261021190351.png]]
+![](images/Pasted%20image%2020261021190351.png)
 
 I used Crackstation to identify the values behind the hashes. For example:
 
-![[Pasted image 20261021190514.png]]
+![](images/Pasted%20image%2020261021190514.png)
 
 I found that the URLs used MD5 hashes of simple numbers. in this case, from 1 to 13. This means that the URL follows this pattern:
 
@@ -47,13 +47,13 @@ Next, I opened Burp Suite, intercepted a request using Proxy, and sent it to Int
 
 I selected the position to use for payload injection.
 
-![[Pasted image 20261021191248.png]]
+![](images/Pasted%20image%2020261021191248.png)
 
 I selected the Simple list payload type and added the wordlist I had created earlier.
 
 Alternatively, I could simplify the process by configuring Intruder as shown below.
 
-![[Pasted image 20261021191446.png]]
+![](images/Pasted%20image%2020261021191446.png)
 
 I clicked "Start attack"and examined the results.
 
@@ -61,7 +61,7 @@ One response had a different length from the others, so I opened the page and ch
 
 I found the flag:
 
-![[Pasted image 20261021191655.png]]
+![](images/Pasted%20image%2020261021191655.png)
 
 ---
 
